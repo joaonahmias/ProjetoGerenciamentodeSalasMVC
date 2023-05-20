@@ -2,6 +2,7 @@ package com.example.projetomvc.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -22,6 +23,12 @@ public class SalaService{
 
     public List<Sala> findAll (){
        return repository.findAll();
+    }
+    public Optional<Sala> findById(Integer id){
+        return repository.findById(id);
+    }
+    public void delete(Sala sala){
+        repository.delete(sala);
     }
     
 }
